@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:"Open Sans",sans-serif;
+}
+
+body{
+  background-color:#262e33;
+}
+h1{
+  font-size: 1.75em;
+  background-color: #4ac8ef ;
+  color: aliceblue;
+  padding: 18px 0;
+  text-align: center;
+}
+
+h1::before,h1::after{
+  background-color: #FFF;
+  content:"a";
+  color: #FFF;
+  position: absolute;;
+  top: 0;
+  height: 73.7px;
+  width: 20px;
+  margin: 0 -20px;
+  
+}
+
+h1::before{
+  left: 25%;
+}
+
+h1::after{
+  right: 25%;
+}
+
+button{
+  border-radius: 4px;
+}
+
+button:hover{
+  opacity: 0.8;
+}
+.container{
+  display: flex;
+  gap: 35px;
+  padding:30px;
+}
+
+.weather-input{
+  width: 550px;
+}
+.weather-input input{
+  width:100%;
+  height: 46px;
+  outline: none;
+  padding: 0 17px;
+  margin: 10px 0 20px 0;
+  border-radius: 5px;
+  font-size: 1.07em;
+  border: 1px solid #CCC;
+}
+
+.weather-input .separator{
+  height: 1px;
+  background:#bbb;
+  width: 100%;
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.weather-input .separator::before{
+  content:"veya";
+  color:aliceblue ;
+  font-size: 1.18rem;
+  padding: 0 15px;
+  background-color:#262e33 ;
+}
+
+.weather-input button{
+  width: 100% ;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  border:none;
+  color: #FFF;
+  background-color: #4ac8ef ;
+}
+
+.weather-input .location-button{
+  background-color: #6C757D;
+}
+.weather-data{
+  width:100%;
+}
+.current-weather{
+  margin-top:55px;
+  color:#fff;
+  background:#4ac8ef ;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border:none;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+
+.current-weather h2{
+  font-size: 1.75rem;
+}
+
+
+
+.current-weather .icon img{
+  margin-top: -15px;
+  max-width: 120px;}
+
+.current-weather .icon h6{
+  margin-top: -10px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.weather-data h4{
+  font-size: 1rem;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+@media screen and (max-width:564px){
+ h1::after{
+   margin-right: -50px;
+ }
+ h1::before{
+    margin-left: -50px;
+ }
+
+ div.weather-input{
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+  flex-direction: column;
+ }
+
+ div.weather-input input,{
+   width: 70%;
+ }
+
+ div.weather-input h3{
+   text-align: center;
+ }
+
+ div.weather-input button{
+   width: 50%;
+ }
+
+ div.container{
+  flex-wrap: wrap;
+ }
+}
